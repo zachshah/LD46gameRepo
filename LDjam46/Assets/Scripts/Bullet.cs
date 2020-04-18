@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
 {
     public int speed;
     public int health;
-
+    public float damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,8 +29,7 @@ public class Bullet : MonoBehaviour
         }
         if (collision.gameObject.tag == "Enemy")
         {
-            collision.GetComponent<NavMeshAgent>().enabled = false;
-            collision.gameObject.transform.position += new Vector3(0, 100, 0);
+            collision.gameObject.GetComponent<EnemyAi>().health -= damage;
             
             health--;
           

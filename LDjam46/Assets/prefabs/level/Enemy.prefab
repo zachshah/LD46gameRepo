@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2307972109547964865}
   - component: {fileID: 2307972109547964878}
   - component: {fileID: 2307972109547964879}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -148,10 +148,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3498ce2f3ba7e1147a3fed04835bb365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
   playerPos: {fileID: 0}
   agent: {fileID: 0}
   pMove: {fileID: 0}
   isChasingPlayer: 0
+  allLights: []
 --- !u!1 &2307972110114193811
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +166,7 @@ GameObject:
   - component: {fileID: 2307972110114193815}
   - component: {fileID: 2307972110114193812}
   - component: {fileID: 2307972110114193813}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

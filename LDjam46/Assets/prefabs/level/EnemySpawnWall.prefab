@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5932179713653079761}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 7119985120365303313}
   - component: {fileID: 7874179947309417284}
   - component: {fileID: 8688447888033058831}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 3739977475299302520}
   - component: {fileID: 4391471915462445329}
   - component: {fileID: 4874793363614565299}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemySpawnWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 2022863063845552470}
   - component: {fileID: 4464814136422378842}
   - component: {fileID: -8073969446281399458}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: lightWallObj
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -251,6 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightVal: 0
   lightIncreaseRate: 10
+  isInZone: 0
 --- !u!1 &6426526463272020074
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,7 +264,7 @@ GameObject:
   - component: {fileID: 4230473683004996834}
   - component: {fileID: 5435993754916237383}
   - component: {fileID: 5543734158700328971}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

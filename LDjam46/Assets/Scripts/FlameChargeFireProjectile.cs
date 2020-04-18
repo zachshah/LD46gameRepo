@@ -44,9 +44,11 @@ public class FlameChargeFireProjectile : MonoBehaviour
             
             cam.Shake((transform.position - fireShot.transform.position).normalized, chargeShot.transform.localScale.x, 0.1f);
             fireShot.transform.localScale = chargeShot.transform.localScale/2;
+            fireShot.GetComponent<Bullet>().damage = fireShot.transform.localScale.x*50;
             if (fireShot.transform.localScale.x > 2.45)
             {
                 fireShot.GetComponent<Bullet>().health = 2;
+                
             }
         }
     }

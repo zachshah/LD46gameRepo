@@ -5,22 +5,45 @@ using UnityEngine.AI;
 
 public class EnemyAi : MonoBehaviour
 {
+    public float health;
     public GameObject playerPos;
     public NavMeshAgent agent;
     public PlayerMovement pMove;
     public bool isChasingPlayer;
+    public GameObject[] allLights;
     // Start is called before the first frame update
     void Start()
     {
+        health = 100;
+       
+       
         playerPos = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
         pMove = playerPos.GetComponent<PlayerMovement>();
-        agent.SetDestination(FindClosestTarget().transform.position);
-    }
+        
 
+        
+        allLights = GameObject.FindGameObjectsWithTag("Light");
+
+        if (FindClosestTarget().transform.parent.gameObject.GetComponent<lightSwitch>().lightVal<5)
+        {
+            
+            agent.SetDestination(allLights[Random.Range(0,3)].transform.position);
+        }
+        else
+        {
+            agent.SetDestination(FindClosestTarget().transform.position);
+        }
+    }
+    
     // Update is called once per frame
     void Update()
     {
+        if (health <= 0)
+        {
+            GetComponent<NavMeshAgent>().enabled = false;
+            transform.position += new Vector3(0, 100, 0);
+        }
         if (GetComponent<NavMeshAgent>().enabled == false)
         {
             StartCoroutine(DestroyEnemy());

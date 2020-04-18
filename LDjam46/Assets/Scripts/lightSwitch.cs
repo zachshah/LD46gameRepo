@@ -5,20 +5,20 @@ using UnityEngine.UI;
 
 public class lightSwitch : MonoBehaviour
 {
-    public float lightVal;
+    public float lightVal=26f;
     public float lightIncreaseRate;
     public int isInZone;
-    public Image lightUi;
+ 
     // Start is called before the first frame update
     void Start()
     {
-        lightUi = FindObjectOfType<Image>();
+        lightVal = Random.Range(23, 26);
     }
 
     // Update is called once per frame
     void Update()
     {
-        lightUi.fillAmount = lightVal / 50;
+        
         if (isInZone>0)
         {
             if (lightVal < 50)

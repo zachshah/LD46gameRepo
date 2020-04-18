@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &53068842 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4643516176456518394, guid: 3361033681f9c1a4e96b68e2687e1f9b,
+    type: 3}
+  m_PrefabInstance: {fileID: 627073105}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &133023419
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,6 +138,7 @@ GameObject:
   - component: {fileID: 133023420}
   - component: {fileID: 133023422}
   - component: {fileID: 133023421}
+  - component: {fileID: 133023423}
   m_Layer: 5
   m_Name: lightGui'
   m_TagString: LightGui
@@ -194,6 +201,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133023419}
   m_CullTransparentMesh: 0
+--- !u!114 &133023423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133023419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5774a6c18c7ad9444a13fda6b132c67d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightList: []
+  whichLight: 0
+  checkedAlready: 0
 --- !u!1 &461438134
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,12 +375,88 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &545764535 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7012895571382616161, guid: 4b0896392b9ae804799e00d414397b29,
-    type: 3}
-  m_PrefabInstance: {fileID: 1014741662}
-  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &627073105
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 53133355, guid: 3361033681f9c1a4e96b68e2687e1f9b, type: 3}
+      propertyPath: physicalMouse
+      value: 
+      objectReference: {fileID: 501608631}
+    - target: {fileID: 53133355, guid: 3361033681f9c1a4e96b68e2687e1f9b, type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 1536
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643516176456518394, guid: 3361033681f9c1a4e96b68e2687e1f9b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643516176456518394, guid: 3361033681f9c1a4e96b68e2687e1f9b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643516176456518394, guid: 3361033681f9c1a4e96b68e2687e1f9b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643516176456518394, guid: 3361033681f9c1a4e96b68e2687e1f9b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643516176456518394, guid: 3361033681f9c1a4e96b68e2687e1f9b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643516176456518394, guid: 3361033681f9c1a4e96b68e2687e1f9b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643516176456518394, guid: 3361033681f9c1a4e96b68e2687e1f9b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643516176456518394, guid: 3361033681f9c1a4e96b68e2687e1f9b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643516176456518394, guid: 3361033681f9c1a4e96b68e2687e1f9b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643516176456518394, guid: 3361033681f9c1a4e96b68e2687e1f9b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643516176456518394, guid: 3361033681f9c1a4e96b68e2687e1f9b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643516176456518396, guid: 3361033681f9c1a4e96b68e2687e1f9b,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerLaser Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643516176456518397, guid: 3361033681f9c1a4e96b68e2687e1f9b,
+        type: 3}
+      propertyPath: physicalMouseLoc
+      value: 
+      objectReference: {fileID: 501608631}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3361033681f9c1a4e96b68e2687e1f9b, type: 3}
 --- !u!1 &693486239
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,13 +468,14 @@ GameObject:
   - component: {fileID: 693486240}
   - component: {fileID: 693486242}
   - component: {fileID: 693486241}
+  - component: {fileID: 693486243}
   m_Layer: 5
   m_Name: lightGui'3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &693486240
 RectTransform:
   m_ObjectHideFlags: 0
@@ -432,6 +531,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693486239}
   m_CullTransparentMesh: 0
+--- !u!114 &693486243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693486239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5774a6c18c7ad9444a13fda6b132c67d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightList: []
+  whichLight: 2
+  checkedAlready: 0
 --- !u!1 &824320760
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,7 +642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1531bb126c4c254b90298bc4bd47900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 545764535}
+  player: {fileID: 53068842}
   finalOffset: {x: 0, y: 0, z: -9}
 --- !u!1 &1003968856
 GameObject:
@@ -623,80 +737,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1014741662
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7012895571382616161, guid: 4b0896392b9ae804799e00d414397b29,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7012895571382616161, guid: 4b0896392b9ae804799e00d414397b29,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7012895571382616161, guid: 4b0896392b9ae804799e00d414397b29,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 7012895571382616161, guid: 4b0896392b9ae804799e00d414397b29,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7012895571382616161, guid: 4b0896392b9ae804799e00d414397b29,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7012895571382616161, guid: 4b0896392b9ae804799e00d414397b29,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7012895571382616161, guid: 4b0896392b9ae804799e00d414397b29,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7012895571382616161, guid: 4b0896392b9ae804799e00d414397b29,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7012895571382616161, guid: 4b0896392b9ae804799e00d414397b29,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7012895571382616161, guid: 4b0896392b9ae804799e00d414397b29,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7012895571382616161, guid: 4b0896392b9ae804799e00d414397b29,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7012895571382616166, guid: 4b0896392b9ae804799e00d414397b29,
-        type: 3}
-      propertyPath: physicalMouseLoc
-      value: 
-      objectReference: {fileID: 501608631}
-    - target: {fileID: 7012895571382616167, guid: 4b0896392b9ae804799e00d414397b29,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayerScorch Variant
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4b0896392b9ae804799e00d414397b29, type: 3}
 --- !u!1 &1254762426
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,7 +877,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 567
   m_UseGeometry: 1
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
@@ -847,7 +887,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: bea39f50274b0c3448f6fde18782d57f, type: 2}
 --- !u!65 &1351688176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -933,13 +973,14 @@ GameObject:
   - component: {fileID: 1616605995}
   - component: {fileID: 1616605997}
   - component: {fileID: 1616605996}
+  - component: {fileID: 1616605998}
   m_Layer: 5
   m_Name: lightGui'4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1616605995
 RectTransform:
   m_ObjectHideFlags: 0
@@ -995,6 +1036,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616605994}
   m_CullTransparentMesh: 0
+--- !u!114 &1616605998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616605994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5774a6c18c7ad9444a13fda6b132c67d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightList: []
+  whichLight: 3
+  checkedAlready: 0
 --- !u!1 &1689722786
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,14 +1205,14 @@ MonoBehaviour:
   roomSizeWorldUnits: {x: 160, y: 160}
   worldUnitsInOneGridCell: 5
   walkerDirChangeChance: 0.46
-  wallObj: {fileID: 2598912086802144328, guid: fa2353380449e3949a1c7668a2c08611, type: 3}
+  wallObj: {fileID: 6060512921901739819, guid: 2ef507c04e3d66146843fb7788fba362, type: 3}
   floorObj: {fileID: 8993937432708761517, guid: 05f03e5c18f92574da80c3b9f6fd4210,
     type: 3}
   wallHolder: {fileID: 1689722786}
   spawnWallCount: 1
   spawnWall: {fileID: 8459563013387884558, guid: 8cebf48679e90ac4fa70cd3b0a8a4c02,
     type: 3}
-  lightWallCount: 1
+  lightWallCount: 4
   lightWall: {fileID: 1899345243395061866, guid: 29cfb60ba8ba2d7478b7ac0388e2f532,
     type: 3}
   wallList: []
@@ -1187,13 +1243,14 @@ GameObject:
   - component: {fileID: 2085278716}
   - component: {fileID: 2085278718}
   - component: {fileID: 2085278717}
+  - component: {fileID: 2085278719}
   m_Layer: 5
   m_Name: lightGui'2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2085278716
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1249,3 +1306,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085278715}
   m_CullTransparentMesh: 0
+--- !u!114 &2085278719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085278715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5774a6c18c7ad9444a13fda6b132c67d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightList: []
+  whichLight: 1
+  checkedAlready: 0
