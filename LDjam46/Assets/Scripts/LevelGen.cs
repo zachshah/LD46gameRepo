@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class LevelGen : MonoBehaviour
 {
+
     enum gridSpace { empty, floor, wall };
     gridSpace[,] grid;
     int roomHeight;
@@ -29,8 +31,9 @@ public class LevelGen : MonoBehaviour
     private Vector3 startRot;
 
     public List<GameObject> wallList = new List<GameObject>();
- 
- 
+
+    public NavMeshSurface surface;
+
          
 
 void Start()
@@ -47,6 +50,9 @@ void Start()
 
         listWallObj();
         swapWallWithObj();
+
+        StartCoroutine(WaitToBake());
+        
     }
     void listWallObj()
     {
@@ -258,6 +264,12 @@ void Start()
             }
         }
         return count;
+    }
+
+    IEnumerator WaitToBake()
+    {
+        yield return new WaitForSeconds(2f);
+        surface.BuildNavMesh();
     }
 
 }

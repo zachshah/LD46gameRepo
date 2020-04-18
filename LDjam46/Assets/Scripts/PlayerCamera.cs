@@ -29,13 +29,14 @@ public class PlayerCamera : MonoBehaviour
     }
     private void Update()
     {
-        mousePos = CaptureMousePos();
-        shakeOffset = UpdateShake();
-        target = UpdateTargetPos();
+      
         
     }
     private void FixedUpdate()
     {
+        mousePos = CaptureMousePos();
+        shakeOffset = UpdateShake();
+        target = UpdateTargetPos();
         UpdateCameraPos();
     }
     Vector3 CaptureMousePos()
