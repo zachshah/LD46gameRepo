@@ -26,7 +26,10 @@ public class LevelGen : MonoBehaviour
     public GameObject wallObj;
     public GameObject floorObj;
     public GameObject wallHolder;
+    public int spawnWallCount;
     public GameObject spawnWall;
+    public int lightWallCount;
+    public GameObject lightWall;
 
     private Vector3 startRot;
 
@@ -64,13 +67,23 @@ void Start()
     }
     void swapWallWithObj()
     {
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < spawnWallCount; i++)
         {
             int randomWall = Random.Range(0, wallList.Count);
             GameObject specialWall = wallList[randomWall];
             Instantiate(spawnWall, specialWall.transform.position, specialWall.transform.rotation);
             Destroy(specialWall);
-            Debug.Log(randomWall);
+            
+            wallList.RemoveAt(randomWall);
+        }
+        for (int i = 0; i < lightWallCount; i++)
+        {
+            int randomWall = Random.Range(0, wallList.Count);
+            GameObject specialWall = wallList[randomWall];
+            Instantiate(lightWall, specialWall.transform.position, specialWall.transform.rotation);
+            Destroy(specialWall);
+            
+            wallList.RemoveAt(randomWall);
         }
     }
 

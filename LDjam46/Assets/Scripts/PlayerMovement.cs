@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
+    public List<GameObject> enemiesChasingThisObject = new List<GameObject>();
     public float moveSpeed;
     private Rigidbody myRigidbody;
 
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       
         myRigidbody = GetComponent<Rigidbody>();
         mainCamera = FindObjectOfType<Camera>();
     }
@@ -37,6 +39,14 @@ public class PlayerMovement : MonoBehaviour
             Debug.DrawLine(cameraRay.origin, pointToLook, Color.green);
 
             transform.LookAt(new Vector3(pointToLook.x,transform.position.y,pointToLook.z));
+        }
+    }
+    private void LateUpdate()
+    {
+        for (var i = 0; i < enemiesChasingThisObject.Count; i++)
+        {
+            if (enemiesChasingThisObject[i] == null)
+                enemiesChasingThisObject.RemoveAt(i);
         }
     }
     private void FixedUpdate()

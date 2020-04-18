@@ -6,6 +6,8 @@ public class rotateToAllign : MonoBehaviour
 {
     public bool collisionCount=false;
    
+    public bool hasZone;
+    public GameObject zoneRange;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,20 +19,32 @@ public class rotateToAllign : MonoBehaviour
     {
         if (collisionCount == false)
         {
+           
             transform.rotation *= Quaternion.Euler(0,90,0);
         }
+       
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Floor") {
             collisionCount = true;
-          
+            if(hasZone)
+                StartCoroutine(WaitToAddZone());
+
         }
       //  Debug.Log("AYYYY");
        
     }
     private void OnTriggerExit(Collider other)
     {
-        collisionCount = false;
+        if (other.gameObject.tag == "Floor")
+        {
+            collisionCount = false;
+        }
+    }
+    IEnumerator WaitToAddZone()
+    {
+        yield return new WaitForSeconds(3f);
+        zoneRange.SetActive(true);
     }
 }
