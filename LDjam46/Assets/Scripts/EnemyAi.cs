@@ -21,7 +21,10 @@ public class EnemyAi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (GetComponent<NavMeshAgent>().enabled == false)
+        {
+            StartCoroutine(DestroyEnemy());
+        }
         if (isChasingPlayer)
         {
             transform.LookAt(new Vector3(playerPos.transform.position.x, transform.position.y, playerPos.transform.position.z));
@@ -63,5 +66,10 @@ public class EnemyAi : MonoBehaviour
             }
         }
         return closest;
+    }
+    IEnumerator DestroyEnemy()
+    {
+        yield return new WaitForSeconds(.4f);
+        Destroy(this.gameObject);
     }
 }
