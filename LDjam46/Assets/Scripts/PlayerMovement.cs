@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
             health -= 5 * Time.deltaTime;
             else
             {
-
+                GameObject.FindGameObjectWithTag("pointManager").GetComponent<pointManage>().isDead = true;
             }
         }
     }

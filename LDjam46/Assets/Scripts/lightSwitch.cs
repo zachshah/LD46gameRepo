@@ -8,6 +8,7 @@ public class lightSwitch : MonoBehaviour
     public float lightVal=26f;
     public float lightIncreaseRate;
     public int isInZone;
+    public SpriteRenderer mySprt;
  
     // Start is called before the first frame update
     void Start()
@@ -30,8 +31,21 @@ public class lightSwitch : MonoBehaviour
         {
             if (lightVal > 2)
             {
+               
                 lightVal += lightIncreaseRate * (isInZone / 2) * Time.deltaTime;
             }
+        }
+        if (lightVal > 30)
+        {
+            mySprt.color = Color.green;
+        }
+       else if (lightVal < 20)
+        {
+            mySprt.color = Color.red;
+        }
+        else
+        {
+            mySprt.color = Color.yellow;
         }
     }
     private void OnTriggerEnter(Collider other)

@@ -11,6 +11,7 @@ public class EnemyAi : MonoBehaviour
     public PlayerMovement pMove;
     public bool isChasingPlayer;
     public GameObject[] allLights;
+    public int maxEnemies;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,7 +61,7 @@ public class EnemyAi : MonoBehaviour
     }
     void LateUpdate()
     {
-        if (pMove.enemiesChasingThisObject.Count < 5) {
+        if (pMove.enemiesChasingThisObject.Count < maxEnemies) {
             if (isChasingPlayer == false)
             {
                 pMove.enemiesChasingThisObject.Add(this.gameObject);

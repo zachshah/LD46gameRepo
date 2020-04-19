@@ -66,7 +66,7 @@ public class ChangePlayer : MonoBehaviour
     public void loadFloor()
     {
         if(playerToSpawn!=null)
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
         else
             whichPlayer.text = "UP UP DOWN DOWN LEFT RIGHT LEFT RIGHT B A START - SELECT A PLAYER PLEASE - ";
     }

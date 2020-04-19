@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class pointManage : MonoBehaviour
 {
+    public bool isDead;
     public Image goodPt;
     public Image badPt;
 
@@ -70,7 +71,7 @@ public class pointManage : MonoBehaviour
         
         badPt.fillAmount = badTally / tallyMax;
         goodPt.fillAmount = goodTally / tallyMax;
-        if (badPt.fillAmount == 1)
+        if (badPt.fillAmount == 1||isDead)
         {
             if (!endisNie)
             {

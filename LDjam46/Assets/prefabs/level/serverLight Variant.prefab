@@ -70,7 +70,7 @@ PrefabInstance:
     - target: {fileID: 658269091773949996, guid: 29cfb60ba8ba2d7478b7ac0388e2f532,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1242353243036173916, guid: 29cfb60ba8ba2d7478b7ac0388e2f532,
         type: 3}
@@ -80,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 1899345243395061866, guid: 29cfb60ba8ba2d7478b7ac0388e2f532,
         type: 3}
       propertyPath: m_Name
-      value: serverLight
+      value: serverLight Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2549920294114101723, guid: 29cfb60ba8ba2d7478b7ac0388e2f532,
         type: 3}

@@ -27,6 +27,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5b0d11bca1eb4224b9f3c3bf063c1762, type: 2}
+    - target: {fileID: 4874793363614565299, guid: 8cebf48679e90ac4fa70cd3b0a8a4c02,
+        type: 3}
+      propertyPath: SpawnWaveAmountMinMax.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874793363614565299, guid: 8cebf48679e90ac4fa70cd3b0a8a4c02,
+        type: 3}
+      propertyPath: SpawnWaveAmountMinMax.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874793363614565299, guid: 8cebf48679e90ac4fa70cd3b0a8a4c02,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 8737116027738356859, guid: bdc8698fa61dca14bb9fea6c358c5e04,
+        type: 3}
     - target: {fileID: 5528053130591202925, guid: 8cebf48679e90ac4fa70cd3b0a8a4c02,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -100,7 +116,7 @@ PrefabInstance:
     - target: {fileID: 8459563013387884558, guid: 8cebf48679e90ac4fa70cd3b0a8a4c02,
         type: 3}
       propertyPath: m_Name
-      value: serverEnemySPawn
+      value: serverEnemySPawn Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8946409093218928496, guid: 8cebf48679e90ac4fa70cd3b0a8a4c02,
         type: 3}

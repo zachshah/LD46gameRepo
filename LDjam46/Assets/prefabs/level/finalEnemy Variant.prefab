@@ -27,6 +27,32 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 284417eedb338a8458dc38b13b4b5ecc, type: 2}
+    - target: {fileID: 4874793363614565299, guid: 8cebf48679e90ac4fa70cd3b0a8a4c02,
+        type: 3}
+      propertyPath: spawnWaveWaitTimeMinMax.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874793363614565299, guid: 8cebf48679e90ac4fa70cd3b0a8a4c02,
+        type: 3}
+      propertyPath: spawnWaveWaitTimeMinMax.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874793363614565299, guid: 8cebf48679e90ac4fa70cd3b0a8a4c02,
+        type: 3}
+      propertyPath: SpawnWaveAmountMinMax.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874793363614565299, guid: 8cebf48679e90ac4fa70cd3b0a8a4c02,
+        type: 3}
+      propertyPath: SpawnWaveAmountMinMax.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874793363614565299, guid: 8cebf48679e90ac4fa70cd3b0a8a4c02,
+        type: 3}
+      propertyPath: enemyToSpawn
+      value: 
+      objectReference: {fileID: 1048451796145283958, guid: 339c17fc264abb147949a5eab4df7a07,
+        type: 3}
     - target: {fileID: 5528053130591202925, guid: 8cebf48679e90ac4fa70cd3b0a8a4c02,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -100,7 +126,7 @@ PrefabInstance:
     - target: {fileID: 8459563013387884558, guid: 8cebf48679e90ac4fa70cd3b0a8a4c02,
         type: 3}
       propertyPath: m_Name
-      value: finalEnemy
+      value: finalEnemy Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8946409093218928496, guid: 8cebf48679e90ac4fa70cd3b0a8a4c02,
         type: 3}

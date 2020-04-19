@@ -336,6 +336,7 @@ MonoBehaviour:
   lightVal: 0
   lightIncreaseRate: 10
   isInZone: 0
+  mySprt: {fileID: 2423701321359856796}
 --- !u!1 &4849929228399527108
 GameObject:
   m_ObjectHideFlags: 0

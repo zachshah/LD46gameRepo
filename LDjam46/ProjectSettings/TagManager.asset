@@ -11,6 +11,7 @@ TagManager:
   - LightGui
   - PhysicalMouse
   - PlayerPref
+  - pointManager
   layers:
   - Default
   - TransparentFX

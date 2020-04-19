@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8073969446281399458, guid: 29cfb60ba8ba2d7478b7ac0388e2f532,
+        type: 3}
+      propertyPath: mySprt
+      value: 
+      objectReference: {fileID: 7352923852327528940}
     - target: {fileID: 318503208561007214, guid: 29cfb60ba8ba2d7478b7ac0388e2f532,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -75,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 1899345243395061866, guid: 29cfb60ba8ba2d7478b7ac0388e2f532,
         type: 3}
       propertyPath: m_Name
-      value: finalLight
+      value: finalLight Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2549920294114101723, guid: 29cfb60ba8ba2d7478b7ac0388e2f532,
         type: 3}
@@ -99,3 +104,9 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 284417eedb338a8458dc38b13b4b5ecc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29cfb60ba8ba2d7478b7ac0388e2f532, type: 3}
+--- !u!212 &7352923852327528940 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2423701321359856796, guid: 29cfb60ba8ba2d7478b7ac0388e2f532,
+    type: 3}
+  m_PrefabInstance: {fileID: 5163485600744357232}
+  m_PrefabAsset: {fileID: 0}
