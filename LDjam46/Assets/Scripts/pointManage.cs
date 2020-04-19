@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class pointManage : MonoBehaviour
 {
     public Image goodPt;
@@ -20,26 +21,38 @@ public class pointManage : MonoBehaviour
     public float goodTally;
     public float badTally;
     public int tallyMax;
+
+    private PlayerMovement pMove;
+
+    private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
+        pMove = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        StartCoroutine(Begin());
     }
-
+    IEnumerator Begin()
+    {
+        pMove.enabled = false;
+        yield return new WaitForSeconds(7);
+        anim.SetBool("isLoading", false);
+        pMove.enabled = true;
+    }
     // Update is called once per frame
     void Update()
     {
+        
+        badPt.fillAmount = badTally / tallyMax;
+        goodPt.fillAmount = goodTally / tallyMax;
         if (badPt.fillAmount == 1)
         {
-
+            anim.SetBool("Failed", true);
         }
         if (goodPt.fillAmount == 1)
         {
-
+            anim.SetBool("Success", true);
         }
-        badPt.fillAmount = badTally / tallyMax;
-        goodPt.fillAmount = goodTally / tallyMax;
-
         if (pointTotal > 0)
         {
             if (goodTally < tallyMax)
