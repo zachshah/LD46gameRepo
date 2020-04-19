@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
+    public float health;
     public List<GameObject> enemiesChasingThisObject = new List<GameObject>();
     public float moveSpeed;
     private Rigidbody myRigidbody;
@@ -53,5 +54,17 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         myRigidbody.velocity = moveVelocity;
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            if(health>0)
+            health -= 5 * Time.deltaTime;
+            else
+            {
+
+            }
+        }
     }
 }

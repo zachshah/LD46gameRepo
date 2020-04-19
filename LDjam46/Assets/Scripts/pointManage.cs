@@ -29,6 +29,14 @@ public class pointManage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (badPt.fillAmount == 1)
+        {
+
+        }
+        if (goodPt.fillAmount == 1)
+        {
+
+        }
         badPt.fillAmount = badTally / tallyMax;
         goodPt.fillAmount = goodTally / tallyMax;
 

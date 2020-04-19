@@ -176,6 +176,19 @@ MonoBehaviour:
     type: 3}
   SpawnPos: {fileID: 7012895572339030541}
   scaleSpeed: 3
+--- !u!65 &1810239719
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7012895571382616167}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4, y: 2, z: 1.4}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7206979404139917715
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,6 +502,16 @@ PrefabInstance:
         type: 3}
       propertyPath: physicalMouseLoc
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289641057165223053, guid: a92ab5b66d39ecd4592860acb6541515,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 1400
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289641057165223053, guid: a92ab5b66d39ecd4592860acb6541515,
+        type: 3}
+      propertyPath: health
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8289641057165223054, guid: a92ab5b66d39ecd4592860acb6541515,
         type: 3}

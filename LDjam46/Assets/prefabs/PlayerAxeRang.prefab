@@ -236,6 +236,19 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!65 &-1479207193699411042
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129284367649518675}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4, y: 2, z: 1.4}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &287987953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -878,18 +891,23 @@ PrefabInstance:
       propertyPath: physicalMouseLoc
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8289641057165223053, guid: a92ab5b66d39ecd4592860acb6541515,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 1500
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8289641057165223051, guid: a92ab5b66d39ecd4592860acb6541515, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a92ab5b66d39ecd4592860acb6541515, type: 3}
---- !u!4 &1129284367095434809 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8289641056108355302, guid: a92ab5b66d39ecd4592860acb6541515,
-    type: 3}
-  m_PrefabInstance: {fileID: 8982076207809237215}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1129284367649518677 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8289641057165223050, guid: a92ab5b66d39ecd4592860acb6541515,
+    type: 3}
+  m_PrefabInstance: {fileID: 8982076207809237215}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1129284367095434809 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8289641056108355302, guid: a92ab5b66d39ecd4592860acb6541515,
     type: 3}
   m_PrefabInstance: {fileID: 8982076207809237215}
   m_PrefabAsset: {fileID: 0}
