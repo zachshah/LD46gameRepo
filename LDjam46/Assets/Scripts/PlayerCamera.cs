@@ -27,11 +27,13 @@ public class PlayerCamera : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         target = player.position;
         yStart = transform.position.y;
-    }
-    private void Update()
-    {
       
-        
+    }
+   
+        private void Update()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+
     }
     private void FixedUpdate()
     {

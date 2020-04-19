@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class pointManage : MonoBehaviour
 {
@@ -24,6 +24,8 @@ public class pointManage : MonoBehaviour
 
     private PlayerMovement pMove;
 
+    private bool endisNie;
+
     private Animator anim;
     // Start is called before the first frame update
     void Start()
@@ -34,10 +36,33 @@ public class pointManage : MonoBehaviour
     }
     IEnumerator Begin()
     {
+       
         pMove.enabled = false;
         yield return new WaitForSeconds(7);
-        anim.SetBool("isLoading", false);
+        anim.SetBool("isLoading", true);
         pMove.enabled = true;
+    }
+    IEnumerator Death()
+    {
+        anim.SetBool("isLoading", false);
+        endisNie = true;
+        anim.SetBool("Failed", true);
+        Time.timeScale = .5f;
+        yield return new WaitForSeconds(2);
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
+        Time.timeScale = 1f;
+    }
+    IEnumerator nextFloor()
+    {
+        anim.SetBool("isLoading", false);
+        endisNie = true;
+        anim.SetBool("Success", true);
+        Time.timeScale = .5f;
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 1f;
+
     }
     // Update is called once per frame
     void Update()
@@ -47,11 +72,16 @@ public class pointManage : MonoBehaviour
         goodPt.fillAmount = goodTally / tallyMax;
         if (badPt.fillAmount == 1)
         {
-            anim.SetBool("Failed", true);
+            if (!endisNie)
+            {
+                
+                StartCoroutine(Death());
+            }
         }
         if (goodPt.fillAmount == 1)
         {
-            anim.SetBool("Success", true);
+            if (!endisNie)
+                StartCoroutine(nextFloor());
         }
         if (pointTotal > 0)
         {
