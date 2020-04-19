@@ -9,6 +9,7 @@ TagManager:
   - Light
   - Enemy
   - LightGui
+  - PhysicalMouse
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Player
   - Obstacle
   - Enemy
-  - 
+  - PostProcessing
   - 
   - 
   - 

@@ -11,7 +11,7 @@ public class LaserFireProjectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        physicalMouse = GameObject.FindGameObjectWithTag("PhysicalMouse");
     }
 
     // Update is called once per frame

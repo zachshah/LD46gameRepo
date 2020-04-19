@@ -10,6 +10,7 @@ public class boomerang : MonoBehaviour
     public bool go;
     private bool going;
     private bool sendBack;
+    public Vector3 ScaledAxe;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,10 +45,23 @@ public class boomerang : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-       // Debug.Log(other.gameObject.tag);
-        if (other.gameObject.tag == "Wall")
+        // Debug.Log(other.gameObject.tag);
+        if (other.gameObject.tag == "Enemy")
+        {
+            if (transform.parent == null)
+            {
+                other.gameObject.GetComponent<EnemyAi>().health -= 75;
+            }
+            else
+            {
+                other.gameObject.GetComponent<EnemyAi>().health -= 25;
+            }
+            sendBack = true;
+        }
+            if (other.gameObject.tag == "Wall")
         {
             sendBack = true;
+            
         }
         if (other.gameObject.tag == returnLoc.gameObject.tag&&sendBack)
         {
@@ -58,7 +72,7 @@ public class boomerang : MonoBehaviour
             going = false;
             sendBack = false;
             transform.position = returnLoc.position;
-       
+            transform.localScale = ScaledAxe;
             transform.rotation = returnLoc.rotation;
            
           

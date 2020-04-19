@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        physicalMouseLoc = GameObject.FindGameObjectWithTag("PhysicalMouse");
        
         myRigidbody = GetComponent<Rigidbody>();
         mainCamera = FindObjectOfType<Camera>();
@@ -29,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         moveVelocity = moveInput * moveSpeed*Time.deltaTime;
 
         Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
-        Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+        Plane groundPlane = new Plane(Vector3.up, new Vector3(0,2.5f,0));
         float rayLength;
 
         if (groundPlane.Raycast(cameraRay,out rayLength))

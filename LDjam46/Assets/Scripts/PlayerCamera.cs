@@ -24,6 +24,7 @@ public class PlayerCamera : MonoBehaviour
     bool shaking;
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         target = player.position;
         yStart = transform.position.y;
     }
