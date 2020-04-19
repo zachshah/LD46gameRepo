@@ -23,8 +23,10 @@ public class EnemySpawn : MonoBehaviour
     }
     IEnumerator Spawn()
     {
+        yield return new WaitForSeconds(6f);
         while (1 == 1)
         {
+           
             yield return new WaitForSeconds(Random.Range(spawnWaveWaitTimeMinMax.x, spawnWaveWaitTimeMinMax.y));
             for(int i=0;i< Random.Range(SpawnWaveAmountMinMax.x, SpawnWaveAmountMinMax.y); i++)
             {
