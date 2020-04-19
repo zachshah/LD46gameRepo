@@ -2387,7 +2387,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 418b332437d8efc45bbed27e0f0c4404, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 7
     m_MaxSize: 55
     m_Alignment: 4
@@ -2567,7 +2567,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1946957767}
   - component: {fileID: 1946957766}
-  - component: {fileID: 1946957765}
   - component: {fileID: 1946957764}
   - component: {fileID: 1946957763}
   - component: {fileID: 1946957762}
@@ -2669,14 +2668,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   finalOffset: {x: 0, y: 0, z: -9}
---- !u!81 &1946957765
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1946957761}
-  m_Enabled: 1
 --- !u!20 &1946957766
 Camera:
   m_ObjectHideFlags: 0

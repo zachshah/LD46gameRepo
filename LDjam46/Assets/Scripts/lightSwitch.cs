@@ -5,14 +5,16 @@ using UnityEngine.UI;
 
 public class lightSwitch : MonoBehaviour
 {
+    private AudioSource aSource;
     public float lightVal=26f;
     public float lightIncreaseRate;
     public int isInZone;
     public SpriteRenderer mySprt;
- 
+    private bool noSound;
     // Start is called before the first frame update
     void Start()
     {
+        aSource = GetComponent<AudioSource>();
         lightVal = Random.Range(23, 26);
     }
 
@@ -52,6 +54,7 @@ public class lightSwitch : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            aSource.Play();
             isInZone +=3;
         }
         if (other.gameObject.tag == "Enemy")

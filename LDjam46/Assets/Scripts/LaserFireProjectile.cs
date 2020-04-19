@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LaserFireProjectile : MonoBehaviour
 {
+    private AudioSource aSource;
     public LayerMask layerMask;
     public LineRenderer lineR;
     public GameObject physicalMouse;
@@ -11,12 +12,15 @@ public class LaserFireProjectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        aSource = GetComponent<AudioSource>();
         physicalMouse = GameObject.FindGameObjectWithTag("PhysicalMouse");
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetButtonDown("Fire1"))
+            aSource.Play();
         if (Input.GetButton("Fire1"))
         {
             lineR.enabled = true;

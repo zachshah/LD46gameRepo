@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AxeFireProjectile : MonoBehaviour
 {
+    private AudioSource aSource;
     public Transform spawnPos;
     public GameObject projectile;
     public boomerang Boom;
@@ -15,7 +16,7 @@ public class AxeFireProjectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        aSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,7 +24,7 @@ public class AxeFireProjectile : MonoBehaviour
     {
         if (Input.GetButton("Fire1") &&Boom.go==false)
         {
-            
+            aSource.Play();
            Boom.go = true;
         }
       

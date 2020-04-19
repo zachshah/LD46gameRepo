@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FlameChargeFireProjectile : MonoBehaviour
 {
+    private AudioSource aSource;
     public GameObject projectileStationary;
     public GameObject projectileFirable;
     public Transform SpawnPos;
@@ -14,6 +15,7 @@ public class FlameChargeFireProjectile : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        aSource = GetComponent<AudioSource>();
         cam = FindObjectOfType<PlayerCamera>();
     }
 
@@ -38,7 +40,7 @@ public class FlameChargeFireProjectile : MonoBehaviour
         }
         if (Input.GetButtonUp("Fire1"))
         {
-
+            aSource.Play();
             Destroy(chargeShot);
             fireShot = Instantiate(projectileFirable, SpawnPos.position, SpawnPos.rotation);
             

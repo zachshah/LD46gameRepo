@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyAi : MonoBehaviour
 {
+    private AudioSource aSource;
     public float health;
     public GameObject playerPos;
     public NavMeshAgent agent;
@@ -12,9 +13,11 @@ public class EnemyAi : MonoBehaviour
     public bool isChasingPlayer;
     public GameObject[] allLights;
     public int maxEnemies;
+    private bool notDeadYet = false;
     // Start is called before the first frame update
     void Start()
     {
+        aSource = GetComponent<AudioSource>();
         health = 100;
        
        
@@ -40,6 +43,11 @@ public class EnemyAi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health <= 0&&!notDeadYet)
+        {
+            notDeadYet = true;
+            aSource.Play();
+        }
         if (health <= 0)
         {
             GetComponent<NavMeshAgent>().enabled = false;
@@ -93,6 +101,7 @@ public class EnemyAi : MonoBehaviour
     }
     IEnumerator DestroyEnemy()
     {
+      
         yield return new WaitForSeconds(.4f);
         Destroy(this.gameObject);
     }
